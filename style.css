@@ -1,0 +1,33 @@
+
+#container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 75px;
+}
+
+body{
+    background-color: black;
+
+}
+
+#board{
+    width: 800px;
+    height: 800px;
+}
+
+table{
+    background-color: rgb(255, 255, 255);
+}
+
+td{
+    background-color: aqua;
+    width: 20px;
+    height: 20px;
+}
+
+#uiGame{
+    background: rgb(2, 97, 97);
+    height: 800px;
+    width: 200px;
+}
