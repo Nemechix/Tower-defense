@@ -9,7 +9,7 @@
 }
 
 body{
-    background-color: black;
+    background-color: #0D1321;
 
 }
 
@@ -19,11 +19,11 @@ body{
 }
 
 table{
-    background-color: rgb(255, 255, 255);
+    background-color: #1D2D44;
 }
 
 td{
-    background-color: aqua;
+    background-color: #748CAB;
     width: 20px;
     height: 20px;
 }
@@ -46,6 +46,7 @@ left: 10px;
 
 h2{
 box-sizing: content-box;
+color: #F0EBD8;
 }
 
 .uiValuesNum{
@@ -66,11 +67,11 @@ top: 300px;
 .turrets{
     width: 200px;
     height: 60px;
-    background-color: rgb(31, 224, 224);
+    background-color: #3E5C76;
 }
 
 
 
 #torreta1{
-    background: blueviolet;
+    background: #3b4d64;
 }
