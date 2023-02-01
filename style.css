@@ -4,6 +4,8 @@
     align-items: center;
     justify-content: center;
     padding-top: 75px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
 }
 
 body{
@@ -30,4 +32,39 @@ td{
     background: rgb(2, 97, 97);
     height: 800px;
     width: 200px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;    
+
 }
+
+#uiValues{
+position: absolute;
+left: 10px;
+}
+
+
+h2{
+box-sizing: content-box;
+}
+
+.uiValuesNum{
+position: relative;
+top: 1.9px;
+}
+
+#uiGameTurrets{
+position: absolute;
+height: 200px;
+width: 200px;
+top: 300px;
+
+    
+}
+
+.turrets{
+    width: 200px;
+    height: 60px;
+    background-color: rgb(30, 82, 213);
+}
+
