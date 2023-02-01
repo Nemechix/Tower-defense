@@ -19,12 +19,12 @@ torreta1.onclick = function(){
 cells.forEach((element) => { 
 
     element.onclick = function(){
-    
-    if(money >= 10){
+        
+    if(money >= 10)
+
     console.log("work")
     element.setAttribute("id", chosedTurret)
-    money -= 10
-    }
+    money -= 10 
     }
 });
 
