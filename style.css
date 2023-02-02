@@ -83,12 +83,12 @@ h2 {
     background: #F0EBD8;
 }
 
-.enemy1 {
-    background: orange;
-}
-
 .path {
     background: #F0EBD8;
+}
+
+.enemy1 {
+    background: orange;
 }
 
 .end {
