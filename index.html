@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <script defer src="enemy.js"></script>
     <script defer src="main.js"></script>
+
 </head>
 
 <body id="container">
@@ -107,11 +109,11 @@
             <td class="col3"></td>
             <td class="col4"></td>
             <td class="col5"></td>
-            <td class="col6"></td>
-            <td class="col7"></td>
-            <td class="col8"></td>
-            <td class="col9"></td>
-            <td class="col10"></td>
+            <td class="col6 path"></td>
+            <td class="col7 path"></td>
+            <td class="col8 path"></td>
+            <td class="col9 path"></td>
+            <td class="col10 path"></td>
             <td class="col11"></td>
             <td class="col12"></td>
             <td class="col13"></td>
@@ -129,11 +131,11 @@
             <td class="col3"></td>
             <td class="col4"></td>
             <td class="col5"></td>
-            <td class="col6"></td>
+            <td class="col6 path"></td>
             <td class="col7"></td>
             <td class="col8"></td>
             <td class="col9"></td>
-            <td class="col10"></td>
+            <td class="col10 path"></td>
             <td class="col11"></td>
             <td class="col12"></td>
             <td class="col13"></td>
@@ -151,11 +153,11 @@
             <td class="col3"></td>
             <td class="col4"></td>
             <td class="col5"></td>
-            <td class="col6"></td>
+            <td class="col6 path"></td>
             <td class="col7"></td>
             <td class="col8"></td>
             <td class="col9"></td>
-            <td class="col10"></td>
+            <td class="col10 path"></td>
             <td class="col11"></td>
             <td class="col12"></td>
             <td class="col13"></td>
@@ -173,11 +175,11 @@
             <td class="col3"></td>
             <td class="col4"></td>
             <td class="col5"></td>
-            <td class="col6"></td>
+            <td class="col6 path"></td>
             <td class="col7"></td>
             <td class="col8"></td>
             <td class="col9"></td>
-            <td class="col10"></td>
+            <td class="col10 path"></td>
             <td class="col11"></td>
             <td class="col12"></td>
             <td class="col13"></td>
@@ -195,11 +197,11 @@
             <td class="col3"></td>
             <td class="col4"></td>
             <td class="col5"></td>
-            <td class="col6"></td>
+            <td class="col6 path"></td>
             <td class="col7"></td>
             <td class="col8"></td>
             <td class="col9"></td>
-            <td class="col10"></td>
+            <td class="col10 path"></td>
             <td class="col11"></td>
             <td class="col12"></td>
             <td class="col13"></td>
@@ -212,26 +214,26 @@
             <td class="col20"></td>
         </tr>
         <tr class="row10">
-            <td class="col1"></td>
-            <td class="col2"></td>
-            <td class="col3"></td>
-            <td class="col4"></td>
-            <td class="col5"></td>
-            <td class="col6"></td>
+            <td class="col1 enemy1"></td>
+            <td class="col2 path"></td>
+            <td class="col3 path"></td>
+            <td class="col4 path"></td>
+            <td class="col5 path"></td>
+            <td class="col6 path"></td>
             <td class="col7"></td>
             <td class="col8"></td>
             <td class="col9"></td>
-            <td class="col10"></td>
+            <td class="col10 path"></td>
             <td class="col11"></td>
             <td class="col12"></td>
             <td class="col13"></td>
-            <td class="col14"></td>
-            <td class="col15"></td>
-            <td class="col16"></td>
-            <td class="col17"></td>
-            <td class="col18"></td>
-            <td class="col19"></td>
-            <td class="col20"></td>
+            <td class="col14 path"></td>
+            <td class="col15 path"></td>
+            <td class="col16 path"></td>
+            <td class="col17 path"></td>
+            <td class="col18 path"></td>
+            <td class="col19 path"></td>
+            <td class="col20 path end"></td>
         </tr>
         <tr class="row11">
             <td class="col1"></td>
@@ -243,11 +245,11 @@
             <td class="col7"></td>
             <td class="col8"></td>
             <td class="col9"></td>
-            <td class="col10"></td>
+            <td class="col10 path"></td>
             <td class="col11"></td>
             <td class="col12"></td>
             <td class="col13"></td>
-            <td class="col14"></td>
+            <td class="col14 path"></td>
             <td class="col15"></td>
             <td class="col16"></td>
             <td class="col17"></td>
@@ -265,11 +267,11 @@
             <td class="col7"></td>
             <td class="col8"></td>
             <td class="col9"></td>
-            <td class="col10"></td>
+            <td class="col10 path"></td>
             <td class="col11"></td>
             <td class="col12"></td>
             <td class="col13"></td>
-            <td class="col14"></td>
+            <td class="col14 path"></td>
             <td class="col15"></td>
             <td class="col16"></td>
             <td class="col17"></td>
@@ -287,11 +289,11 @@
             <td class="col7"></td>
             <td class="col8"></td>
             <td class="col9"></td>
-            <td class="col10"></td>
+            <td class="col10 path"></td>
             <td class="col11"></td>
             <td class="col12"></td>
             <td class="col13"></td>
-            <td class="col14"></td>
+            <td class="col14 path"></td>
             <td class="col15"></td>
             <td class="col16"></td>
             <td class="col17"></td>
@@ -309,11 +311,11 @@
             <td class="col7"></td>
             <td class="col8"></td>
             <td class="col9"></td>
-            <td class="col10"></td>
+            <td class="col10 path"></td>
             <td class="col11"></td>
             <td class="col12"></td>
             <td class="col13"></td>
-            <td class="col14"></td>
+            <td class="col14 path"></td>
             <td class="col15"></td>
             <td class="col16"></td>
             <td class="col17"></td>
@@ -331,11 +333,11 @@
             <td class="col7"></td>
             <td class="col8"></td>
             <td class="col9"></td>
-            <td class="col10"></td>
+            <td class="col10 path"></td>
             <td class="col11"></td>
             <td class="col12"></td>
             <td class="col13"></td>
-            <td class="col14"></td>
+            <td class="col14 path"></td>
             <td class="col15"></td>
             <td class="col16"></td>
             <td class="col17"></td>
@@ -353,11 +355,11 @@
             <td class="col7"></td>
             <td class="col8"></td>
             <td class="col9"></td>
-            <td class="col10"></td>
-            <td class="col11"></td>
-            <td class="col12"></td>
-            <td class="col13"></td>
-            <td class="col14"></td>
+            <td class="col10 path"></td>
+            <td class="col11 path"></td>
+            <td class="col12 path"></td>
+            <td class="col13 path"></td>
+            <td class="col14 path"></td>
             <td class="col15"></td>
             <td class="col16"></td>
             <td class="col17"></td>
@@ -460,21 +462,21 @@
             <h2>Reboot defenders</h2>
             <h2>Money: <span id="uiMoney" class="uiValuesNum">100</span></h2>
             <h2>Timer: <span class="uiValuesNum">00:00</span></h2>
-            <h2>Score: <span >0</span></h2>
+            <h2>Score: <span>0</span></h2>
         </div>
 
         <div id="uiGameTurrets">
 
-            <table id="boardTurrets" >
-            <td class="turrets" id="torreta1">
-                <tr class="cellTorret" ></tr>
-            </td>
-            <td class="turrets">
-                <tr class="cellTorret"></tr>
-            </td>
-            <td class="turrets">
-                <tr class="cellTorret"></tr>
-            </td>
+            <table id="boardTurrets">
+                <td class="turrets" id="torreta1">
+                    <tr class="cellTorret"></tr>
+                </td>
+                <td class="turrets" id="torreta2">
+                    <tr class="cellTorret"></tr>
+                </td>
+                <td class="turrets" id="torreta3">
+                    <tr class="cellTorret"></tr>
+                </td>
             </table>
 
         </div>
