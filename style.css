@@ -92,11 +92,10 @@ h2 {
 }
 
 .enemy1 {
-    background-image: url(/assets/82854-sonic-art-pixel-line-the-hedgehog.png);
-
+    background: url(/assets/);
     background-size: cover;
     background-repeat: no-repeat;
-    
+    background: orange;
 }
 
 .end {

@@ -5,6 +5,10 @@ let timerId = setInterval(() => {
     game.monster.push(enemy)
 }, 3000);
 
+
+//refactor timers hacer
+
+
 //Constructor enemigos
 function Enemy(hp, x, y, direction, game) {
     this.pos = {
