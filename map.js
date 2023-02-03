@@ -23,9 +23,9 @@ for(let i = 0; i<map.length; i++){
     for(let j = 0; j<map[i].length; j++){
         const mapCell = document.querySelector(`tr.row${i} td.col${j}`)
         if(map[i][j] === 1){
-            mapCell.setAttribute(`class`, `path`)
+            mapCell.classList.add(`path`)
         } else if(map[i][j] === 2){
-            mapCell.setAttribute(`class`, `end`)
+            mapCell.classList.add(`end`, 'path')
         }
     }
 }
