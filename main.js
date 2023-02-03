@@ -8,12 +8,7 @@ let torreUP = "no"
 let money = document.getElementById("uiMoney")
 let money2 = parseInt(money.innerHTML)
 
-let Game = {
-    torreta: [],
-    monster: [],
 
-
-}
 
 
 torreta1.onclick = function () {
@@ -21,7 +16,7 @@ torreta1.onclick = function () {
     //console.log("work")  
     //console.log(chosedTurret)
 }
-
+ 
 
 cells.forEach((element) => {
 
@@ -41,4 +36,3 @@ cells.forEach((element) => {
 });
 
 
-setInterval

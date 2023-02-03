@@ -1,16 +1,30 @@
-function Enemy(hp, x, y, direction) {
+let Game = {
+    torreta: [],
+    monster: [],
+}
+
+let timerId = setInterval(() => {
+    const enemy = new Enemy(10, 9, 0, "right", Game)
+    Game.monster.push(enemy)
+    console.log(Game.monster)
+}, 3000);
+
+function Enemy(hp, x, y, direction, Game) {
     this.pos = {
         x: x,
         y: y
     }
     this.hp = hp
     this.direction = 'right'
+    this.enemyId = setInterval(() => {
+        this.movePath()
+    }, 200);
 
     Enemy.prototype.movePath = function () {
         let endPosition = document.querySelector(`.row${this.pos.x} .col${this.pos.y + 1}`)
 
 
-        if (direction === "right") {
+        if (this.direction === "right") {
 
             let nextCellright = document.querySelector(`.row${this.pos.x} .col${this.pos.y + 1}`);
             let nextCelldown = document.querySelector(`.row${this.pos.x +1} .col${this.pos.y}`);
@@ -18,17 +32,18 @@ function Enemy(hp, x, y, direction) {
             
             if (nextCellright.classList.contains("path")) {
                 let enemy1 = document.querySelector(`.row${this.pos.x} .col${this.pos.y}`);
+
                 enemy1.classList.remove("enemy1")
                 nextCellright.classList.add("enemy1")
                 this.pos.y++
             } else if (nextCelldown.classList.contains("path")) {
-                direction = 'down'
+                this.direction = 'down'
             } else {
-                direction = 'up'
+                this.direction = 'up'
             }
         }
 
-        if (direction === "up") {
+        if (this.direction === "up") {
             let nextCell = document.querySelector(`.row${this.pos.x - 1} .col${this.pos.y}`);
             let checkPath = nextCell.classList.contains("path")
             if (checkPath == true) {
@@ -36,31 +51,35 @@ function Enemy(hp, x, y, direction) {
                 enemy1.classList.remove("enemy1")
                 nextCell.classList.add("enemy1")
                 this.pos.x--
-            } else if (direction !== "up") {
-                direction = 'down'
+            } else if (this.direction !== "up") {
+                this.direction = 'down'
             } else {
-                direction = "right"
+                this.direction = "right"
             }
         }
 
-        if (direction === "down") {
+        if (this.direction === "down") {
 
             let nextCelldown = document.querySelector(`.row${this.pos.x +1} .col${this.pos.y}`);
             let nextCellleft = document.querySelector(`.row${this.pos.x} .col${this.pos.y - 1}`);
 
             if (nextCelldown.classList.contains("path")) {
                 let enemy1 = document.querySelector(`.row${this.pos.x} .col${this.pos.y}`);
+
                 enemy1.classList.remove("enemy1")
                 nextCelldown.classList.add("enemy1")
                 this.pos.x++
             } else if (nextCellleft.classList.contains("path")) {
-                direction = 'left'
+                this.direction = 'left'
             } else {
-                direction = 'right'
+                this.direction = 'right'
             }
         }
         if (endPosition.classList.contains("end")){
-            clearInterval(anim)
+            clearInterval(this.enemyId)
+            Game.monster.shift()
+            
+            
         }
     }
 
@@ -75,18 +94,17 @@ function Enemy(hp, x, y, direction) {
 
 
 
-    var enemy1 = new Enemy(10, 9, 0, "right")
+/*  var enemy1 = new Enemy(10, 9, 0, "right")
     let anim = setInterval(() => {
         enemy1.movePath()
-    }, 200);
+    }, 200); */
 
 
 
 
-    var enemy2 = new Enemy(5, 9, 0, "right")
-    let anim1 = setInterval(() => {
-        enemy2.movePath()
-    }, 800);
+
+
+
 
 
 
