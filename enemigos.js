@@ -53,8 +53,17 @@ function Enemy(hp, x, y, direction, Game) {
                 this.direction = 'down'
             } else {
                 this.direction = "right"
-            }
+            } money.innerHTML = money2
+            Game.torreta.push(element)
+            console.log(Game.torreta)
+            console.log(Game.cellsEnemy)
+
         }
+    }
+}
+});
+
+
 
         if (this.direction === "down") {
 
@@ -81,12 +90,3 @@ function Enemy(hp, x, y, direction, Game) {
         }
     }
 }
-
-
-
-
-
-
-
-
-

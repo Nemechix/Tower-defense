@@ -9,32 +9,7 @@ let money = document.getElementById("uiMoney")
 let money2 = parseInt(money.innerHTML)
 
 
-
-
-torreta1.onclick = function () {
-    chosedTurret = "torreta1"
-    //console.log("work")  
-    //console.log(chosedTurret)
+let Game = {
+    torreta: [],
+    monster: [],
 }
- 
-
-cells.forEach((element) => {
-
-    element.onclick = function () {
-        if(!element.classList.contains("path")){
-        if (money2 >= 10 && chosedTurret !== "") {
-
-            //console.log("work")
-            element.setAttribute("id", chosedTurret)
-            money2 = money2 - 10
-            money.innerHTML = money2
-            Game.torreta.push(element)
-            console.log(Game.torreta)
-            console.log(Game.cellsEnemy)
-
-        }
-    }
-}
-});
-
-

@@ -9,11 +9,13 @@
     <title>Document</title>
     <script defer src="main.js"></script>
     <script defer src="enemy.js"></script>
+    <script defer src="map.js"></script>
+    <script defer src="turrets.js"></script>
 
 </head>
 
 <body id="container">
-    <table id="board" cellspacing="1">
+    <table id="board" cellspacing="2">
         <tr class="row0">
             <td class="col0"></td>
             <td class="col1"></td>
@@ -108,11 +110,11 @@
             <td class="col2"></td>
             <td class="col3"></td>
             <td class="col4"></td>
-            <td class="col5 path"></td>
-            <td class="col6 path"></td>
-            <td class="col7 path"></td>
-            <td class="col8 path"></td>
-            <td class="col9 path"></td>
+            <td class="col5"></td>
+            <td class="col6"></td>
+            <td class="col7"></td>
+            <td class="col8"></td>
+            <td class="col9"></td>
             <td class="col10"></td>
             <td class="col11"></td>
             <td class="col12"></td>
@@ -130,11 +132,11 @@
             <td class="col2"></td>
             <td class="col3"></td>
             <td class="col4"></td>
-            <td class="col5 path"></td>
+            <td class="col5"></td>
             <td class="col6"></td>
             <td class="col7"></td>
             <td class="col8"></td>
-            <td class="col9 path"></td>
+            <td class="col9"></td>
             <td class="col10"></td>
             <td class="col11"></td>
             <td class="col12"></td>
@@ -152,11 +154,11 @@
             <td class="col2"></td>
             <td class="col3"></td>
             <td class="col4"></td>
-            <td class="col5 path"></td>
+            <td class="col5"></td>
             <td class="col6"></td>
             <td class="col7"></td>
             <td class="col8"></td>
-            <td class="col9 path"></td>
+            <td class="col9"></td>
             <td class="col10"></td>
             <td class="col11"></td>
             <td class="col12"></td>
@@ -174,11 +176,11 @@
             <td class="col2"></td>
             <td class="col3"></td>
             <td class="col4"></td>
-            <td class="col5 path"></td>
+            <td class="col5"></td>
             <td class="col6"></td>
             <td class="col7"></td>
             <td class="col8"></td>
-            <td class="col9 path"></td>
+            <td class="col9"></td>
             <td class="col10"></td>
             <td class="col11"></td>
             <td class="col12"></td>
@@ -196,11 +198,11 @@
             <td class="col2"></td>
             <td class="col3"></td>
             <td class="col4"></td>
-            <td class="col5 path"></td>
+            <td class="col5"></td>
             <td class="col6"></td>
             <td class="col7"></td>
             <td class="col8"></td>
-            <td class="col9 path"></td>
+            <td class="col9"></td>
             <td class="col10"></td>
             <td class="col11"></td>
             <td class="col12"></td>
@@ -213,26 +215,26 @@
             <td class="col19"></td>
         </tr>
         <tr class="row9">
-            <td class="col0 path spawn"></td>
-            <td class="col1 path"></td>
-            <td class="col2 path"></td>
-            <td class="col3 path"></td>
-            <td class="col4 path"></td>
-            <td class="col5 path"></td>
+            <td class="col0 spawn"></td>
+            <td class="col1"></td>
+            <td class="col2"></td>
+            <td class="col3"></td>
+            <td class="col4"></td>
+            <td class="col5"></td>
             <td class="col6"></td>
             <td class="col7"></td>
             <td class="col8"></td>
-            <td class="col9 path"></td>
+            <td class="col9"></td>
             <td class="col10"></td>
             <td class="col11"></td>
             <td class="col12"></td>
-            <td class="col13 path"></td>
-            <td class="col14 path"></td>
-            <td class="col15 path"></td>
-            <td class="col16 path"></td>
-            <td class="col17 path"></td>
-            <td class="col18 path"></td>
-            <td class="col19 path end"></td>
+            <td class="col13"></td>
+            <td class="col14"></td>
+            <td class="col15"></td>
+            <td class="col16"></td>
+            <td class="col17"></td>
+            <td class="col18"></td>
+            <td class="col19 end"></td>
         </tr>
         <tr class="row10">
             <td class="col0"></td>
@@ -244,11 +246,11 @@
             <td class="col6"></td>
             <td class="col7"></td>
             <td class="col8"></td>
-            <td class="col9 path"></td>
+            <td class="col9"></td>
             <td class="col10"></td>
             <td class="col11"></td>
             <td class="col12"></td>
-            <td class="col13 path"></td>
+            <td class="col13"></td>
             <td class="col14"></td>
             <td class="col15"></td>
             <td class="col16"></td>
@@ -266,11 +268,11 @@
             <td class="col6"></td>
             <td class="col7"></td>
             <td class="col8"></td>
-            <td class="col9 path"></td>
+            <td class="col9"></td>
             <td class="col10"></td>
             <td class="col11"></td>
             <td class="col12"></td>
-            <td class="col13 path"></td>
+            <td class="col13"></td>
             <td class="col14"></td>
             <td class="col15"></td>
             <td class="col16"></td>
@@ -288,11 +290,11 @@
             <td class="col6"></td>
             <td class="col7"></td>
             <td class="col8"></td>
-            <td class="col9 path"></td>
+            <td class="col9"></td>
             <td class="col10"></td>
             <td class="col11"></td>
             <td class="col12"></td>
-            <td class="col13 path"></td>
+            <td class="col13"></td>
             <td class="col14"></td>
             <td class="col15"></td>
             <td class="col16"></td>
@@ -310,11 +312,11 @@
             <td class="col6"></td>
             <td class="col7"></td>
             <td class="col8"></td>
-            <td class="col9 path"></td>
+            <td class="col9"></td>
             <td class="col10"></td>
             <td class="col11"></td>
             <td class="col12"></td>
-            <td class="col13 path"></td>
+            <td class="col13"></td>
             <td class="col14"></td>
             <td class="col15"></td>
             <td class="col16"></td>
@@ -332,11 +334,11 @@
             <td class="col6"></td>
             <td class="col7"></td>
             <td class="col8"></td>
-            <td class="col9 path"></td>
+            <td class="col9"></td>
             <td class="col10"></td>
             <td class="col11"></td>
             <td class="col12"></td>
-            <td class="col13 path"></td>
+            <td class="col13"></td>
             <td class="col14"></td>
             <td class="col15"></td>
             <td class="col16"></td>
@@ -354,11 +356,11 @@
             <td class="col6"></td>
             <td class="col7"></td>
             <td class="col8"></td>
-            <td class="col9 path"></td>
-            <td class="col10 path"></td>
-            <td class="col11 path"></td>
-            <td class="col12 path"></td>
-            <td class="col13 path"></td>
+            <td class="col9"></td>
+            <td class="col10"></td>
+            <td class="col11"></td>
+            <td class="col12"></td>
+            <td class="col13"></td>
             <td class="col14"></td>
             <td class="col15"></td>
             <td class="col16"></td>
