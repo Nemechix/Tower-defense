@@ -34,7 +34,6 @@ let turret1 = new Turret(5)
 torreta1.onclick = function () {
     chosedTurret = "torreta1"
     console.log("work")  
-    //console.log(chosedTurret)
 }
 
 //Sistema de colocar torretas
@@ -44,13 +43,10 @@ cells.forEach((element) => {
         if (!element.classList.contains("path")) {
             if (money2 >= 10 && chosedTurret !== 1) {
 
-                //console.log("work")
                 element.setAttribute("id", chosedTurret)
                 money2 = money2 - 10
                 money.innerHTML = money2
                 game.torreta.push(element)
-                console.log(game.torreta)
-                console.log(game.cellsEnemy)
 
             }
         }

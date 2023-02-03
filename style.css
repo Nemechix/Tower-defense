@@ -54,19 +54,23 @@ h2 {
 }
 
 #uiGameTurrets {
-    background-color: blueviolet;
+    
     position: absolute;
     height: 200px;
-    width: 200px;
+    width: 100px;
     top: 300px;
-
-
+    display: flex;
+    padding-left: 50px;
+    
 }
+
+
 
 .turrets {
     width: 200px;
     height: 60px;
     background-color: #3E5C76;
+    
 }
 
 
@@ -84,11 +88,15 @@ h2 {
 }
 
 .path {
-    background: #d8f0de;
+    background: #F0EBD8;
 }
 
 .enemy1 {
-    background: orange;
+    background-image: url(/assets/82854-sonic-art-pixel-line-the-hedgehog.png);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    
 }
 
 .end {
