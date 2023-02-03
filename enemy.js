@@ -103,21 +103,50 @@ function Enemy(hp, x, y, direction, Game) {
 
 
 
+cells.forEach((element) => {
+
+    element.onclick = function () {
+        if (!element.classList.contains("path")) {
+            if (money2 >= 10 && chosedTurret !== "") {
+
+                //console.log("work")
+                element.setAttribute("id", chosedTurret)
+                money2 = money2 - 10
+                money.innerHTML = money2
+                Game.torreta.push(element)
+                console.log(Game.torreta)
+                console.log(Game.cellsEnemy)
+
+            }
+        }
+    }
+});
 
 
 
 
 
 
-
-    function Turret1(dmg, posX, posY) {
+    function Turret(dmg) {
         this.dmg = dmg
         this.sprite = document.getElementById("torreta1")
+        this.pos = {
+            x: x,
+            y: y
+        }
+        Turret.prototype.range = function(){
+            let rangeRight =
+            let rangeLeft =
+            let rangeUp =
+            let rangeDown =
 
-
+        }
     }
 
-    Turret1.prototype.attack = function () {
+    
+
+    
+Turret.prototype.attack = function () {
         return this.dmg
     }
 
@@ -127,7 +156,6 @@ function Enemy(hp, x, y, direction, Game) {
     if (enemy1.posX === enemy1.posY) {
         enemy1.receiveDamage(torreta1.attack())
     }
-
 
 
 

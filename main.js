@@ -21,6 +21,7 @@ torreta1.onclick = function () {
 cells.forEach((element) => {
 
     element.onclick = function () {
+        if(!element.classList.contains("path")){
         if (money2 >= 10 && chosedTurret !== "") {
 
             //console.log("work")
@@ -33,6 +34,7 @@ cells.forEach((element) => {
 
         }
     }
+}
 });
 
 
