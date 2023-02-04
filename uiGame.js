@@ -73,6 +73,7 @@ const uiGameTurrets = document.createElement(`div`)
 
 function tableTurrets() {
     const tableTurrets = document.createElement(`table`)
+    
 
     for (let tr = 0; tr < 3; tr++) {
         const tr = document.createElement(`tr`)
@@ -92,16 +93,11 @@ function tableTurrets() {
 
     uiGame.appendChild(uiGameTurrets)
     uiGameTurrets.setAttribute(`id`, `uiGameTurrets`)
-
     uiGameTurrets.appendChild(tableTurrets)
+
+
+    tableTurrets.classList.add(`tableTurrets`)
+    
 }
 
 tableTurrets()
-
-
-
-
-
-
-
-

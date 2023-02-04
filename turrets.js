@@ -1,7 +1,30 @@
+const turret = document.getElementById(`cellTurret`)
 
+function Turret(dmg, x, y) {
+    this.dmg = dmg
+    this.sprite = document.getElementById("torreta1")
+    this.pos = {
+        x: x,
+        y: y
+    }
+    Turret.prototype.range = function () {
 
+        let rangeRight = document.querySelector(`.row${this.pos.x} .col${this.pos.y + 1}`);
+        let rangeLeft = document.querySelector(`.row${this.pos.x} .col${this.pos.y - 1}`);
+        let rangeUp = document.querySelector(`.row${this.pos.x - 1} .col${this.pos.y}`);
+        let rangeDown = document.querySelector(`.row${this.pos.x + 1} .col${this.pos.y}`);
 
+        if (rangeRight.classList.contains("enemy1")) {
+            console.log("hit")
+        }
+    }
+}
+let turret1 = new Turret(5)
 
+torreta1.onclick = function () {
+    chosedTurret = "torreta1"
+    console.log("work")
+}
 
 
 
