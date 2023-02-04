@@ -89,7 +89,7 @@ function tableTurrets() {
 
         tableTurrets.appendChild(tr)
     }
-    
+
     uiGame.appendChild(uiGameTurrets)
     uiGameTurrets.setAttribute(`id`, `uiGameTurrets`)
 
