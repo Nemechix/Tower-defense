@@ -1,4 +1,4 @@
-// let game = {
-//     torreta: [],
-//     monster: [],
-// }
+let game = {
+    torreta: [],
+    monster: [],
+}

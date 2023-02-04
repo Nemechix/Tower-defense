@@ -1,3 +1,16 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
 // let torreta1 = document.getElementById("torreta1")
 // let cells = document.querySelectorAll("#board td")
 // let cellsEnemy = document.querySelectorAll("#board td")
@@ -16,14 +29,14 @@
 //         y: y
 //     }
 //     Turret.prototype.range = function () {
-        
-//          let rangeRight = document.querySelector(`.row${this.pos.x} .col${this.pos.y + 1}`);
+
+//         let rangeRight = document.querySelector(`.row${this.pos.x} .col${this.pos.y + 1}`);
 //         let rangeLeft = document.querySelector(`.row${this.pos.x} .col${this.pos.y - 1}`);
 //         let rangeUp = document.querySelector(`.row${this.pos.x - 1} .col${this.pos.y}`);
 //         let rangeDown = document.querySelector(`.row${this.pos.x + 1} .col${this.pos.y}`);
 
 //         if (rangeRight.classList.contains("enemy1")) {
-//             console.log("hit") 
+//             console.log("hit")
 //         }
 //     }
 // }
@@ -33,7 +46,7 @@
 
 // torreta1.onclick = function () {
 //     chosedTurret = "torreta1"
-//     console.log("work")  
+//     console.log("work")
 // }
 
 // //Sistema de colocar torretas
