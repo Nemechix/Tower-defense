@@ -29,7 +29,7 @@ td {
 
 #uiGame {
     background: rgb(2, 97, 97);
-    height: 800px;
+    height: 519px;
     width: 200px;
     position: relative;
     display: flex;
@@ -51,26 +51,27 @@ h2 {
 .uiValuesNum {
     position: relative;
     top: 1.9px;
+    left: 10px;
 }
 
 #uiGameTurrets {
-    
+
     position: absolute;
     height: 200px;
     width: 100px;
     top: 300px;
     display: flex;
     padding-left: 50px;
-    
+
 }
 
 
 
-.turrets {
+.cellTurret {
     width: 200px;
     height: 60px;
     background-color: #3E5C76;
-    
+
 }
 
 
@@ -102,7 +103,6 @@ h2 {
     background: #0D1321;
 }
 
-.spawn{
-background: red
-
+.spawn {
+    background: red
 }
