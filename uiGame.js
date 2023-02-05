@@ -27,7 +27,7 @@ uiValues.appendChild(title)
 const money = document.createElement(`h2`)
 const cash = document.createTextNode(`Money:`)
 const economy = document.createElement(`span`)
-const quantity = document.createTextNode(`10`)
+const quantity = document.createTextNode(`50`)
 
 money.appendChild(cash)
 money.appendChild(economy)

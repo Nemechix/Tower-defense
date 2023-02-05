@@ -1,4 +1,8 @@
 let game = {
-    torreta: [],
+    turret: [],
     monster: [],
+
+    
 }
+
+

@@ -1,5 +1,5 @@
 let turrets0 = document.getElementById("turrets0")
-let choosedTurret = ``
+let chosenTurret = ``
 
 let cells = document.querySelectorAll(`#board td`)
 
@@ -8,7 +8,7 @@ let moneyPlayer = parseInt(moneyUi.innerHTML)
 
 
 
-function Turret(dmg, x, y,) {
+function Turret(dmg, x, y) {
 
     this.dmg = dmg
     this.sprite = document.getElementById(`turrets0`)
@@ -16,28 +16,71 @@ function Turret(dmg, x, y,) {
         x: x,
         y: y
     }
-        // document.querySelector(`.row${this.pos.x} .col${this.pos.y + 1}`);
-        //  document.querySelector(`.row${this.pos.x} .col${this.pos.y - 1}`);
-        //  document.querySelector(`.row${this.pos.x - 1} .col${this.pos.y}`);
-        //  document.querySelector(`.row${this.pos.x + 1} .col${this.pos.y}`); 
-       
+
 }
 
-let turret0 = new Turret(5)
+Turret.prototype.range = function () {
+    this.range.right = document.querySelector(`.row${this.pos.x} .col${this.pos.y + 1}`);
+    this.range.left = document.querySelector(`.row${this.pos.x} .col${this.pos.y - 1}`);
+    this.range.up = document.querySelector(`.row${this.pos.x - 1} .col${this.pos.y}`);
+    this.range.down = document.querySelector(`.row${this.pos.x + 1} .col${this.pos.y}`);
+}
+
+
+
+
+
+// document.querySelector(`.row${this.pos.x} .col${this.pos.y + 1}`);
+//  document.querySelector(`.row${this.pos.x} .col${this.pos.y - 1}`);
+//  document.querySelector(`.row${this.pos.x - 1} .col${this.pos.y}`);
+//  document.querySelector(`.row${this.pos.x + 1} .col${this.pos.y}`); 
+
+
 
 turrets0.onclick = function () {
-    choosedTurret = `turrets0`
+   chosenTurret = `turrets0`
 }
+
+turrets1.onclick = function () {
+    chosenTurret = `turrets1`
+ }
+
+ turrets2.onclick = function () {
+    chosenTurret = `turrets2`
+ }
 
 cells.forEach((element) => {
     element.onclick = function () {
         if (!element.classList.contains(`path`)) {
-            if (moneyPlayer >= 10 && choosedTurret !== 1) {
-                element.setAttribute(`id`, choosedTurret)
+            if (moneyPlayer >= 10 && chosenTurret !== 1) {
+                let row = element.parentNode.classList[0].replace(`row`, ``)
+                row = parseInt(row)
+
+                let col = element.className.replace(`col`, ``)
+                col = parseInt(col)
+
+                console.log(chosenTurret)
+                if(chosenTurret === `turrets0`){
+                 turret = new Turret(5, row, col)
+
+                } else if (chosenTurret === `turrets1`) {
+                     turret = new Turret (5, row, col)
+                } else if (chosenTurret === `turrets2`){
+                 turret = new Turret (5, row, col)
+                }
+
+                
+                turret.range()
+                element.setAttribute(`id`, chosenTurret)
                 moneyPlayer -= 10
                 moneyUi.innerHTML = moneyPlayer
-                game.torreta.push(element)
+                game.turret.push(turret)
+
+                console.log(game.turret)
+
+
             }
         }
     }
+
 });
