@@ -12,9 +12,10 @@ body {
 #board {
     width: 800px;
     height: 800px;
+    
 }
 
-table {
+.tableTurrets {
     background-color: #1D2D44;
     align-items: center;
 }
@@ -30,9 +31,6 @@ td {
     height: 800px;
     width: 200px;
     position: relative;
-    display: flex;
-    justify-content: flex-start;
-
 }
 
 #uiValues {
@@ -59,7 +57,7 @@ h2 {
     width: 100px;
     top: 300px;
     display: flex;
-    padding-left: 50px;
+    left: 50px;
 
 }
 
@@ -67,14 +65,13 @@ h2 {
 
 .cellTurret {
     width: 200px;
-    height: 60px;
     background-color: #3E5C76;
 
 }
 
 
 
-#torreta1 {
+#turrets0 {
     background: #9aeffc;
 }
 

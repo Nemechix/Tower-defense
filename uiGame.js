@@ -76,19 +76,19 @@ function tableTurrets() {
     
 
     for (let tr = 0; tr < 3; tr++) {
-        const tr = document.createElement(`tr`)
-        tr.classList.add(`turrets`)
+        const rows = document.createElement(`tr`)
+        rows.setAttribute(`id`, `turrets${tr}`)
 
         for (let td = 0; td < 1; td++) {
             const td = document.createElement(`td`)
             const turretTxt = document.createTextNode(``)
 
             td.appendChild(turretTxt)
-            tr.appendChild(td)
+            rows.appendChild(td)
             td.classList.add(`cellTurret`)
         }
 
-        tableTurrets.appendChild(tr)
+        tableTurrets.appendChild(rows)
     }
 
     uiGame.appendChild(uiGameTurrets)
@@ -97,7 +97,7 @@ function tableTurrets() {
 
 
     tableTurrets.classList.add(`tableTurrets`)
-    
+
 }
 
 tableTurrets()
