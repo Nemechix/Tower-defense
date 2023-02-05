@@ -21,33 +21,44 @@ function Turret(dmg, x, y) {
 
 Turret.prototype.range = function () {
     this.range.right = document.querySelector(`.row${this.pos.x} .col${this.pos.y + 1}`);
+    this.range.rightUp = document.querySelector(`.row${this.pos.x - 1} .col${this.pos.y + 1}`);
+    this.range.rightDown = document.querySelector(`.row${this.pos.x + 1} .col${this.pos.y + 1}`);
+
+
     this.range.left = document.querySelector(`.row${this.pos.x} .col${this.pos.y - 1}`);
+    this.range.leftUp = document.querySelector(`.row${this.pos.x - 1} .col${this.pos.y - 1}`);
+    this.range.leftDown = document.querySelector(`.row${this.pos.x + 1} .col${this.pos.y - 1}`);
+
     this.range.up = document.querySelector(`.row${this.pos.x - 1} .col${this.pos.y}`);
     this.range.down = document.querySelector(`.row${this.pos.x + 1} .col${this.pos.y}`);
+
+}
+
+
+Turret.prototype.attack = function () {
+    if (turret.range.contains(`enemy`)) {
+        console.log(turret.attack())
+    }
+
 }
 
 
 
 
-
-// document.querySelector(`.row${this.pos.x} .col${this.pos.y + 1}`);
-//  document.querySelector(`.row${this.pos.x} .col${this.pos.y - 1}`);
-//  document.querySelector(`.row${this.pos.x - 1} .col${this.pos.y}`);
-//  document.querySelector(`.row${this.pos.x + 1} .col${this.pos.y}`); 
 
 
 
 turrets0.onclick = function () {
-   chosenTurret = `turrets0`
+    chosenTurret = `turrets0`
 }
 
 turrets1.onclick = function () {
     chosenTurret = `turrets1`
- }
+}
 
- turrets2.onclick = function () {
+turrets2.onclick = function () {
     chosenTurret = `turrets2`
- }
+}
 
 cells.forEach((element) => {
     element.onclick = function () {
@@ -59,26 +70,22 @@ cells.forEach((element) => {
                 let col = element.className.replace(`col`, ``)
                 col = parseInt(col)
 
-                console.log(chosenTurret)
-                if(chosenTurret === `turrets0`){
-                 turret = new Turret(5, row, col)
+
+                if (chosenTurret === `turrets0`) {
+                    turret = new Turret(5, row, col)
 
                 } else if (chosenTurret === `turrets1`) {
-                     turret = new Turret (5, row, col)
-                } else if (chosenTurret === `turrets2`){
-                 turret = new Turret (5, row, col)
+                    turret = new Turret(5, row, col)
+                } else if (chosenTurret === `turrets2`) {
+                    turret = new Turret(5, row, col)
                 }
 
-                
+
                 turret.range()
                 element.setAttribute(`id`, chosenTurret)
                 moneyPlayer -= 10
                 moneyUi.innerHTML = moneyPlayer
                 game.turret.push(turret)
-
-                console.log(game.turret)
-
-
             }
         }
     }

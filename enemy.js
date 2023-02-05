@@ -84,4 +84,9 @@ function Enemy(hp, x, y, direction, game) {
 
         }
     }
+
+
+    Enemy.prototype.receiveDamage = function (dmg){
+        this.hp -= dmg
+    }
 }
