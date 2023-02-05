@@ -1,10 +1,10 @@
-let torreta0 = document.getElementById(`turrets0`)
+let torreta0 = document.getElementById("turrets0")
 let choosedTurret = ``
 
 let cells = document.querySelectorAll(`#board td`)
 
 let moneyUi = document.getElementById(`uiMoney`)
-let moneyPlayer = moneyUi.innerHTML
+let moneyPlayer = parseInt(moneyUi.innerHTML)
 
 function Turret (dmg, x, y){
     this.dmg = dmg
@@ -27,9 +27,9 @@ cells.forEach((element) =>{
             if(moneyPlayer >= 10 && choosedTurret !== 1){
                 element.setAttribute(`id`, choosedTurret)
                 moneyPlayer -= 10
-                moneyPlayer
+                moneyUi.innerHTML = moneyPlayer
                 game.torreta.push(element)
-                console.log(moneyPlayer)
+                console.log(`work`)
             }
         }
     }
