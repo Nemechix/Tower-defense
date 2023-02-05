@@ -28,6 +28,7 @@ function table() {
   let parent = document.querySelector(`.row9`)
   let spawn = parent.querySelector(`.col0`)
   spawn.classList.add(`spawn`)
+  
 
 }
 

@@ -5,7 +5,6 @@ let timerId = setInterval(() => {
     game.monster.push(enemy)
 }, 3000);
 
-
 //refactor timers hacer
 
 

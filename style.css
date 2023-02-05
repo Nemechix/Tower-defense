@@ -31,7 +31,10 @@ td {
     height: 800px;
     width: 200px;
     position: relative;
+    display: flex;
+    justify-content: flex-start;
 }
+
 
 #uiValues {
     position: absolute;
@@ -65,6 +68,7 @@ h2 {
 
 .cellTurret {
     width: 200px;
+    height: 60px;
     background-color: #3E5C76;
 
 }
@@ -75,11 +79,11 @@ h2 {
     background: #9aeffc;
 }
 
-#torreta2 {
+#torreta1 {
     background: #F0EBD8;
 }
 
-#torreta3 {
+#torreta2 {
     background: #F0EBD8;
 }
 
@@ -88,7 +92,6 @@ h2 {
 }
 
 .enemy1 {
-    background: url(/assets/);
     background-size: cover;
     background-repeat: no-repeat;
     background: orange;
