@@ -81,7 +81,7 @@ function tableTurrets() {
 
     for (let tr = 0; tr < 3; tr++) {
         const rows = document.createElement(`tr`)
-        rows.setAttribute(`id`, `turrets${tr}`)
+        rows.classList.add(`rowTurrets`)
 
         for (let td = 0; td < 1; td++) {
             const td = document.createElement(`td`)
@@ -90,6 +90,7 @@ function tableTurrets() {
             td.appendChild(turretTxt)
             rows.appendChild(td)
             td.classList.add(`cellTurret`)
+            td.setAttribute(`id`, `turrets${tr}`)
         }
 
         tableTurrets.appendChild(rows)

@@ -1,4 +1,4 @@
-let torreta0 = document.getElementById("turrets0")
+let turrets0 = document.getElementById("turrets0")
 let choosedTurret = ``
 
 let cells = document.querySelectorAll(`#board td`)
@@ -17,8 +17,8 @@ function Turret (dmg, x, y){
 
 let turret0 = new Turret (5)
 
-torreta0.onclick = function (){
-    choosedTurret = `torreta0`
+turrets0.onclick = function (){
+    choosedTurret = `turrets0`
 }
 
 cells.forEach((element) =>{
