@@ -3,7 +3,7 @@
 let timerId = setInterval(() => {
     const enemy = new Enemy(10, 9, 0, "right", game)
     game.monster.push(enemy)
-}, 3000);
+}, 5000);
 
 //refactor timers hacer
 

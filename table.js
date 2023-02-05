@@ -24,12 +24,6 @@ function table() {
   table.setAttribute("border", "1")
   table.setAttribute(`id`, `board`)
 
-  //Enemy spawn
-  let parent = document.querySelector(`.row9`)
-  let spawn = parent.querySelector(`.col0`)
-  spawn.classList.add(`spawn`)
-  
-
 }
 
 table()

@@ -76,7 +76,14 @@ h2 {
 
 
 #turrets0 {
-    background: #9aeffc;
+    
+   background-color: aqua;
+    background-size: cover;
+    background-size: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    
 }
 
 #turrets1 {
@@ -92,9 +99,11 @@ h2 {
 }
 
 .enemy1 {
+    background-size: 100px;
     background-size: cover;
     background-repeat: no-repeat;
-    background: orange;
+    background-color: orange;
+    
 }
 
 .end {
