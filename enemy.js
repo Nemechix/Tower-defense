@@ -31,10 +31,10 @@ function Enemy(hp, x, y, direction, game) {
             let nextCelldown = document.querySelector(`.row${this.pos.x + 1} .col${this.pos.y}`);
 
             if (map[this.pos.x][this.pos.y + 1] === 1 || map[this.pos.x][this.pos.y + 1] === 2) {
-                let enemy1 = document.querySelector(`.row${this.pos.x} .col${this.pos.y}`);
+                let enemy = document.querySelector(`.row${this.pos.x} .col${this.pos.y}`);
 
-                enemy1.classList.remove("enemy1")
-                nextCellright.classList.add("enemy1")
+                enemy.classList.remove("enemy")
+                nextCellright.classList.add("enemy")
                 this.pos.y++
             } else if (nextCelldown.classList.contains("path")) {
                 this.direction = 'down'
@@ -49,9 +49,9 @@ function Enemy(hp, x, y, direction, game) {
 
 
             if (map[this.pos.x - 1][this.pos.y] === 1) {
-                let enemy1 = document.querySelector(`.row${this.pos.x} .col${this.pos.y}`);
-                enemy1.classList.remove("enemy1")
-                nextCell.classList.add("enemy1")
+                let enemy = document.querySelector(`.row${this.pos.x} .col${this.pos.y}`);
+                enemy.classList.remove("enemy")
+                nextCell.classList.add("enemy")
                 this.pos.x--
             } else if (this.direction !== "up") {
                 this.direction = 'down'
@@ -66,10 +66,10 @@ function Enemy(hp, x, y, direction, game) {
             let nextCellleft = document.querySelector(`.row${this.pos.x} .col${this.pos.y - 1}`);
 
             if (map[this.pos.x + 1][this.pos.y] === 1) {
-                let enemy1 = document.querySelector(`.row${this.pos.x} .col${this.pos.y}`);
+                let enemy = document.querySelector(`.row${this.pos.x} .col${this.pos.y}`);
 
-                enemy1.classList.remove("enemy1")
-                nextCelldown.classList.add("enemy1")
+                enemy.classList.remove("enemy")
+                nextCelldown.classList.add("enemy")
                 this.pos.x++
             } else if (nextCellleft.classList.contains("path")) {
                 this.direction = 'left'

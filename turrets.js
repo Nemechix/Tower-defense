@@ -8,7 +8,7 @@ let moneyPlayer = parseInt(moneyUi.innerHTML)
 
 
 
-function Turret(dmg, x, y, ) {
+function Turret(dmg, x, y,) {
 
     this.dmg = dmg
     this.sprite = document.getElementById(`turrets0`)
