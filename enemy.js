@@ -1,9 +1,10 @@
 //Intervalo de cada cuanto tarda un enemigo en aparecer
 
 let timerId = setInterval(() => {
-    var enemy = new Enemy(10, 9, 0, "right", game)
-    game.monster.push(enemy)
+    const enemy = new Enemy(10, 9, 0, "right", game)
 
+    game.monster.push(enemy)
+    console.log(game.monster)
 }, 2500);
 
 
@@ -21,8 +22,9 @@ function Enemy(hp, x, y, direction, game) {
     this.direction = direction
     this.enemyId = setInterval(() => {
         this.movePath()
-        
+
     }, 200); //Velocidad de movimiento entre celdas
+
 
 
     Enemy.prototype.movePath = function () {
@@ -88,14 +90,46 @@ function Enemy(hp, x, y, direction, game) {
 
 
         }
-    }
 
-    Enemy.prototype.receiveDamage = function (dmg){
-        this.hp -= dmg
+        Enemy.prototype.receiveDamage = function (dmg) {
+            this.hp -= dmg
+        }
+
+
+        game.range.forEach(element => {
+            for (let i = 1; i < element.length; i++) {
+                let coord = element[i]
+                if (coord.x === this.pos.x && coord.y === this.pos.y) {
+
+                    game.turret.forEach(turret => {
+                        if (turret.pos.x === element[0].x && turret.pos.y === element[0].y) {
+                            this.receiveDamage(turret.dmg)
+                        }
+
+
+                    });
+                    if (this.hp <= 0) {
+
+                        moneyPlayer += 10
+                        moneyUi.innerHTML = moneyPlayer
+
+                        scorePlayer += 1
+                        scoreUi.innerHTML = scorePlayer
+
+                        let enemy = document.querySelector(`.row${this.pos.x} .col${this.pos.y}`);
+                        enemy.classList.remove("enemy")
+                        clearInterval(this.enemyId)
+                        game.monster.shift()
+
+                    }
+                }
+            }
+        });
+
+
+
+
     }
 }
-
-
-
 
 

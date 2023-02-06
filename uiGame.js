@@ -41,11 +41,11 @@ economy.setAttribute(`id`, `uiMoney`)
 const timer = document.createElement(`h2`)
 const time = document.createTextNode(`Time:`)
 const hurry = document.createElement(`span`)
-const up = document.createTextNode(`00:00`)
+const upper = document.createTextNode(`00:00`)
 
 timer.appendChild(time)
 timer.appendChild(hurry)
-hurry.appendChild(up)
+hurry.appendChild(upper)
 uiValues.appendChild(timer)
 
 hurry.classList.add(`uiValuesNum`)
@@ -60,6 +60,8 @@ score.appendChild(points)
 score.appendChild(sum)
 sum.appendChild(killeds)
 uiValues.appendChild(score)
+
+sum.setAttribute(`id`, `score`)
 
 sum.classList.add(`uiValuesNum`)
 

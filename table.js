@@ -24,12 +24,6 @@ function table() {
   table.setAttribute("border", "0")
   table.setAttribute(`id`, `board`)
 
-  
-const canvas = document.createElement(`canvas`)
-
-document.body.appendChild(canvas)
-canvas.appendChild(table)
-
 
 }
 
