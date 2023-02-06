@@ -1,13 +1,10 @@
-#container {
+body {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 75px;
     box-sizing: border-box;
     flex-wrap: wrap;
-}
-
-body {
     background-color: #0D1321;
 
 }
@@ -15,10 +12,12 @@ body {
 #board {
     width: 800px;
     height: 800px;
+    
 }
 
-table {
+.tableTurrets {
     background-color: #1D2D44;
+    align-items: center;
 }
 
 td {
@@ -34,8 +33,8 @@ td {
     position: relative;
     display: flex;
     justify-content: flex-start;
-
 }
+
 
 #uiValues {
     position: absolute;
@@ -51,39 +50,47 @@ h2 {
 .uiValuesNum {
     position: relative;
     top: 1.9px;
+    left: 10px;
 }
 
 #uiGameTurrets {
-    
+
     position: absolute;
     height: 200px;
     width: 100px;
     top: 300px;
     display: flex;
-    padding-left: 50px;
-    
+    left: 50px;
+
 }
 
 
 
-.turrets {
+.cellTurret {
     width: 200px;
     height: 60px;
     background-color: #3E5C76;
+
+}
+
+
+
+#turrets0 {
+    
+   background-color: aqua;
+    background-size: cover;
+    background-size: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    
     
 }
 
-
-
-#torreta1 {
-    background: #9aeffc;
-}
-
-#torreta2 {
+#turrets1 {
     background: #F0EBD8;
 }
 
-#torreta3 {
+#turrets2 {
     background: #F0EBD8;
 }
 
@@ -91,18 +98,18 @@ h2 {
     background: #F0EBD8;
 }
 
-.enemy1 {
-    background: url(/assets/);
+.enemy {
+    background-size: 100px;
     background-size: cover;
     background-repeat: no-repeat;
-    background: orange;
+    background-color: orange;
+    
 }
 
 .end {
     background: #0D1321;
 }
 
-.spawn{
-background: red
-
+.spawn {
+    background: red
 }
