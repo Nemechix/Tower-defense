@@ -1,41 +1,62 @@
-#container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 75px;
-    box-sizing: border-box;
-    flex-wrap: wrap;
+@font-face {
+    font-family: 'metal';
+    src: url('fonts/Metal\ Vengeance.ttf') format('truetype');
+    font-style: oblique;
+    font-weight: 500;
+}
+
+* {
+    font-family: "metal";
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #660708;
 }
 
 body {
-    background-color: #0D1321;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    background-color: #161A1D;
 
 }
+
 
 #board {
-    width: 800px;
-    height: 800px;
+    width: 950px;
+    height: 950px;
+    border-spacing: 0px;
+    background: linear-gradient(#A40606, #D98324);
+    border-radius: 20px;
 }
 
-table {
+.tableTurrets {
     background-color: #1D2D44;
+    top: 80px;
+    position: absolute;
+    align-items: center;
+}
+
+.turretZone:hover {
+    background-color: lightcoral;
 }
 
 td {
-    background-color: #748CAB;
-    width: 20px;
-    height: 20px;
+    border-radius: 4px;
 }
 
+
 #uiGame {
-    background: rgb(2, 97, 97);
-    height: 800px;
+    background: linear-gradient(#D3D3D3, #FFFFFF);
+    height: 840px;
     width: 200px;
     position: relative;
     display: flex;
     justify-content: flex-start;
-
+    border-radius: 0 20px 20px 0;
 }
+
 
 #uiValues {
     position: absolute;
@@ -45,64 +66,81 @@ td {
 
 h2 {
     box-sizing: content-box;
-    color: #F0EBD8;
+    color: #161A1D;
 }
 
 .uiValuesNum {
     position: relative;
     top: 1.9px;
+    left: 10px;
 }
 
 #uiGameTurrets {
-    
+
     position: absolute;
     height: 200px;
     width: 100px;
-    top: 300px;
+    top: 290px;
     display: flex;
-    padding-left: 50px;
-    
+    left: 50px;
+
 }
 
 
 
-.turrets {
+.cellTurret {
     width: 200px;
-    height: 60px;
-    background-color: #3E5C76;
-    
+    height: 100px;
+    background-color: #B1A7A6;
+    border-radius: 15px;
+    transition: ease 0.25s;
+
+}
+
+.cellTurret:hover {
+    height: 115px;
+    transition: ease 0.25s;
+    border-radius: px;
 }
 
 
 
-#torreta1 {
-    background: #9aeffc;
+.turrets0 {
+    background-image: url(/assets/d97spro-e73020d0-21fa-46b6-8968-b19728ce9c3b.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 1s;
+
 }
 
-#torreta2 {
+
+
+.turrets1 {
     background: #F0EBD8;
 }
 
-#torreta3 {
+.turrets2 {
     background: #F0EBD8;
 }
 
 .path {
-    background: #F0EBD8;
+    background: #D3D3D3;
 }
 
-.enemy1 {
-    background: url(/assets/);
-    background-size: cover;
+.enemy {
+    background-image: url(assets/krzysztof-pixel-matys-92-run-v4.gif);
+    background-position: center;
+    background-size: 55px;
     background-repeat: no-repeat;
-    background: orange;
+
+
 }
 
 .end {
-    background: #0D1321;
+    background: #161A1D;
 }
 
-.spawn{
-background: red
-
+.spawn {
+    background: #660708
 }

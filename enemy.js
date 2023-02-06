@@ -2,8 +2,10 @@
 
 let timerId = setInterval(() => {
     const enemy = new Enemy(10, 9, 0, "right", game)
+
     game.monster.push(enemy)
-}, 3000);
+}, 2500);
+
 
 
 //refactor timers hacer
@@ -19,11 +21,14 @@ function Enemy(hp, x, y, direction, game) {
     this.direction = direction
     this.enemyId = setInterval(() => {
         this.movePath()
+
     }, 200); //Velocidad de movimiento entre celdas
+
+
 
     Enemy.prototype.movePath = function () {
 
-       let endPosition = document.querySelector(`.row${this.pos.x} .col${this.pos.y + 1}`)
+        let endPosition = document.querySelector(`.row${this.pos.x} .col${this.pos.y + 1}`)
 
 
         if (this.direction === "right") {
@@ -32,10 +37,10 @@ function Enemy(hp, x, y, direction, game) {
             let nextCelldown = document.querySelector(`.row${this.pos.x + 1} .col${this.pos.y}`);
 
             if (map[this.pos.x][this.pos.y + 1] === 1 || map[this.pos.x][this.pos.y + 1] === 2) {
-                let enemy1 = document.querySelector(`.row${this.pos.x} .col${this.pos.y}`);
+                let enemy = document.querySelector(`.row${this.pos.x} .col${this.pos.y}`);
 
-                enemy1.classList.remove("enemy1")
-                nextCellright.classList.add("enemy1")
+                enemy.classList.remove("enemy")
+                nextCellright.classList.add("enemy")
                 this.pos.y++
             } else if (nextCelldown.classList.contains("path")) {
                 this.direction = 'down'
@@ -47,12 +52,12 @@ function Enemy(hp, x, y, direction, game) {
         if (this.direction === "up") {
 
             let nextCell = document.querySelector(`.row${this.pos.x - 1} .col${this.pos.y}`);
-            
+
 
             if (map[this.pos.x - 1][this.pos.y] === 1) {
-                let enemy1 = document.querySelector(`.row${this.pos.x} .col${this.pos.y}`);
-                enemy1.classList.remove("enemy1")
-                nextCell.classList.add("enemy1")
+                let enemy = document.querySelector(`.row${this.pos.x} .col${this.pos.y}`);
+                enemy.classList.remove("enemy")
+                nextCell.classList.add("enemy")
                 this.pos.x--
             } else if (this.direction !== "up") {
                 this.direction = 'down'
@@ -67,10 +72,10 @@ function Enemy(hp, x, y, direction, game) {
             let nextCellleft = document.querySelector(`.row${this.pos.x} .col${this.pos.y - 1}`);
 
             if (map[this.pos.x + 1][this.pos.y] === 1) {
-                let enemy1 = document.querySelector(`.row${this.pos.x} .col${this.pos.y}`);
+                let enemy = document.querySelector(`.row${this.pos.x} .col${this.pos.y}`);
 
-                enemy1.classList.remove("enemy1")
-                nextCelldown.classList.add("enemy1")
+                enemy.classList.remove("enemy")
+                nextCelldown.classList.add("enemy")
                 this.pos.x++
             } else if (nextCellleft.classList.contains("path")) {
                 this.direction = 'left'
@@ -82,16 +87,48 @@ function Enemy(hp, x, y, direction, game) {
             clearInterval(this.enemyId)
             game.monster.shift()
 
-            
+
         }
+
+        Enemy.prototype.receiveDamage = function (dmg) {
+            this.hp -= dmg
+        }
+
+
+        game.range.forEach(element => {
+            for (let i = 1; i < element.length; i++) {
+                let coord = element[i]
+                if (coord.x === this.pos.x && coord.y === this.pos.y) {
+
+                    game.turret.forEach(turret => {
+                        if (turret.pos.x === element[0].x && turret.pos.y === element[0].y) {
+                            this.receiveDamage(turret.dmg)
+                        }
+
+
+                    });
+                    if (this.hp <= 0) {
+
+                        moneyPlayer += 10
+                        moneyUi.innerHTML = moneyPlayer
+
+                        scorePlayer += 1
+                        scoreUi.innerHTML = scorePlayer
+
+                        let enemy = document.querySelector(`.row${this.pos.x} .col${this.pos.y}`);
+                        enemy.classList.remove("enemy")
+                        clearInterval(this.enemyId)
+                        game.monster.shift()
+
+                    }
+                }
+            }
+        });
+
+
+
+
     }
 }
-
-
-
-
-
-
-
 
 
