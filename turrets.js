@@ -8,7 +8,7 @@ let moneyPlayer = parseInt(moneyUi.innerHTML)
 
 
 
-function Turret(dmg, x, y) {
+function Turret(dmg, x, y, right, rightUp, rightDown, left, leftUp, leftDown, up, down) {
 
     this.dmg = dmg
     this.sprite = document.getElementById(`turrets0`)
@@ -16,23 +16,36 @@ function Turret(dmg, x, y) {
         x: x,
         y: y
     }
+    this.range = {
+        right : right,
+        rightUp: rightUp,
+        rightDown: rightDown,
+
+
+        left: left,
+        leftUp: leftUp,
+        leftDown: leftDown,
+
+        up: up,
+        down: down
+    }
 
 }
 
-Turret.prototype.range = function () {
-    this.range.right = document.querySelector(`.row${this.pos.x} .col${this.pos.y + 1}`);
-    this.range.rightUp = document.querySelector(`.row${this.pos.x - 1} .col${this.pos.y + 1}`);
-    this.range.rightDown = document.querySelector(`.row${this.pos.x + 1} .col${this.pos.y + 1}`);
+/* let range = Turret.prototype.range = function () {
+    this.range.right = document.querySelector(`.row${row} .col${col + 1}`);
+    this.range.rightUp = document.querySelector(`.row${row - 1} .col${col + 1}`);
+    this.range.rightDown = document.querySelector(`.row${row + 1} .col${col + 1}`);
 
 
-    this.range.left = document.querySelector(`.row${this.pos.x} .col${this.pos.y - 1}`);
-    this.range.leftUp = document.querySelector(`.row${this.pos.x - 1} .col${this.pos.y - 1}`);
-    this.range.leftDown = document.querySelector(`.row${this.pos.x + 1} .col${this.pos.y - 1}`);
+    this.range.left = document.querySelector(`.row${row} .col${col - 1}`);
+    this.range.leftUp = document.querySelector(`.row${row - 1} .col${col - 1}`);
+    this.range.leftDown = document.querySelector(`.row${row + 1} .col${col - 1}`);
 
-    this.range.up = document.querySelector(`.row${this.pos.x - 1} .col${this.pos.y}`);
-    this.range.down = document.querySelector(`.row${this.pos.x + 1} .col${this.pos.y}`);
+    this.range.up = document.querySelector(`.row${row - 1} .col${col}`);
+    this.range.down = document.querySelector(`.row${row + 1} .col${col}`);
 
-}
+} */
 
 
 Turret.prototype.attack = function () {
@@ -41,10 +54,6 @@ Turret.prototype.attack = function () {
     }
 
 }
-
-
-
-
 
 
 
@@ -70,22 +79,43 @@ cells.forEach((element) => {
                 let col = element.className.replace(`col`, ``)
                 col = parseInt(col)
 
+                let right = document.querySelector(`.row${row} .col${col + 1}`);
+                let rightUp = document.querySelector(`.row${row - 1} .col${col + 1}`);
+                let rightDown = document.querySelector(`.row${row + 1} .col${col + 1}`);
+
+
+                let left = document.querySelector(`.row${row} .col${col - 1}`);
+                let leftUp = document.querySelector(`.row${row - 1} .col${col - 1}`);
+                let leftDown = document.querySelector(`.row${row + 1} .col${col - 1}`);
+
+                let up = document.querySelector(`.row${row - 1} .col${col}`);
+                let down = document.querySelector(`.row${row + 1} .col${col}`);
 
                 if (chosenTurret === `turrets0`) {
-                    turret = new Turret(5, row, col)
+                    turret = new Turret(5, row, col, right, rightUp, rightDown, left, leftUp, leftDown, up, down)
 
                 } else if (chosenTurret === `turrets1`) {
                     turret = new Turret(5, row, col)
+
                 } else if (chosenTurret === `turrets2`) {
                     turret = new Turret(5, row, col)
                 }
 
 
-                turret.range()
+                /* turret.range() */
                 element.setAttribute(`id`, chosenTurret)
                 moneyPlayer -= 10
                 moneyUi.innerHTML = moneyPlayer
                 game.turret.push(turret)
+                game.range.push(turret.range)
+                console.log(game.range)
+                
+                
+                
+                /* game.range.push(range) */
+                
+
+                
             }
         }
     }

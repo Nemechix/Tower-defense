@@ -2,7 +2,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 75px;
+    padding-top: 10px;
     box-sizing: border-box;
     flex-wrap: wrap;
     background-color: #0D1321;
@@ -10,8 +10,10 @@ body {
 }
 
 #board {
-    width: 800px;
-    height: 800px;
+    width: 850px;
+    height: 850px;
+    border-spacing: 0px;
+    
     
 }
 
@@ -21,14 +23,16 @@ body {
 }
 
 td {
-    background-color: #748CAB;
-    width: 20px;
-    height: 20px;
+    background-image: url(/Tower-defense/assets/bd068e6b4c9c503.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
 }
 
 #uiGame {
     background: rgb(2, 97, 97);
-    height: 800px;
+    height: 640px;
     width: 200px;
     position: relative;
     display: flex;
@@ -76,10 +80,9 @@ h2 {
 
 
 #turrets0 {
+    background-image: url(/Tower-defense/assets/d97spro-e73020d0-21fa-46b6-8968-b19728ce9c3b.gif);
     
-   background-color: aqua;
     background-size: cover;
-    background-size: 100px;
     background-position: center;
     background-repeat: no-repeat;
     
@@ -99,10 +102,11 @@ h2 {
 }
 
 .enemy {
-    background-size: 100px;
+    background-image: url(/Tower-defense/assets/krzysztof-pixel-matys-92-run-v4.gif);
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: orange;
+    
     
 }
 

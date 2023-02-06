@@ -21,7 +21,7 @@ function table() {
   }
   table.appendChild(tbody)
   document.body.appendChild(table)
-  table.setAttribute("border", "1")
+  table.setAttribute("border", "0")
   table.setAttribute(`id`, `board`)
 
 }

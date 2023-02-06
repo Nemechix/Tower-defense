@@ -1,9 +1,12 @@
 //Intervalo de cada cuanto tarda un enemigo en aparecer
 
 let timerId = setInterval(() => {
-    const enemy = new Enemy(10, 9, 0, "right", game)
+    var enemy = new Enemy(10, 9, 0, "right", game)
     game.monster.push(enemy)
-}, 5000);
+
+}, 2500);
+
+
 
 //refactor timers hacer
 
@@ -18,7 +21,9 @@ function Enemy(hp, x, y, direction, game) {
     this.direction = direction
     this.enemyId = setInterval(() => {
         this.movePath()
+        
     }, 200); //Velocidad de movimiento entre celdas
+
 
     Enemy.prototype.movePath = function () {
 
@@ -85,8 +90,12 @@ function Enemy(hp, x, y, direction, game) {
         }
     }
 
-
     Enemy.prototype.receiveDamage = function (dmg){
         this.hp -= dmg
     }
 }
+
+
+
+
+
