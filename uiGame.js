@@ -103,6 +103,7 @@ function tableTurrets() {
 
     tableTurrets.classList.add(`tableTurrets`)
 
+
 }
 
 tableTurrets()

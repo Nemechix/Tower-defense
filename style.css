@@ -9,6 +9,12 @@ body {
 
 }
 
+canvas {
+    width: 850px;
+    height: 850px;
+    z-index: 10;
+}
+
 #board {
     width: 850px;
     height: 850px;
