@@ -4,7 +4,6 @@ let timerId = setInterval(() => {
     const enemy = new Enemy(10, 9, 0, "right", game)
 
     game.monster.push(enemy)
-    console.log(game.monster)
 }, 2500);
 
 

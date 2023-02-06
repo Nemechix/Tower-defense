@@ -1,4 +1,7 @@
-let turrets0 = document.getElementById("turrets0")
+let turrets0 = document.getElementsByClassName("turrets0")[0]
+let turrets1 = document.getElementsByClassName("turrets1")[0]
+let turrets2 = document.getElementsByClassName("turrets2")[0]
+
 let chosenTurret = ``
 
 let cells = document.querySelectorAll(`#board td`)
@@ -18,7 +21,7 @@ putTurret.volume = 1;
 function Turret(dmg, x, y) {
 
     this.dmg = dmg
-    this.sprite = document.getElementById(`turrets0`)
+    this.sprite = document.getElementsByClassName(`turrets`)
     this.pos = {
         x: x,
         y: y
@@ -42,6 +45,7 @@ function Turret(dmg, x, y) {
 
 turrets0.onclick = function () {
     chosenTurret = `turrets0`
+    console.log(`work`)
 }
 
 turrets1.onclick = function () {
@@ -62,7 +66,7 @@ cells.forEach((element) => {
 
                 let col = element.className.replace(`col`, ``)
                 col = parseInt(col)
-
+                   
 
 
                 if (chosenTurret === `turrets0`) {
@@ -76,21 +80,16 @@ cells.forEach((element) => {
                 }
                 console.log(game.turret)
 
-                /* turret.range() */
-                element.setAttribute(`id`, chosenTurret)
-                moneyPlayer -= 10
-                moneyUi.innerHTML = moneyPlayer
+               
                 game.turret.push(turret)
                 game.range.push(turret.range)
+                
+                element.classList.add(chosenTurret)
+                moneyPlayer -= 10
+                moneyUi.innerHTML = moneyPlayer
+                
                 putTurret.play()
-                
-                
-                
-                
-                /* game.range.push(range) */
-                
-
-                
+                   
             }
         }
     }

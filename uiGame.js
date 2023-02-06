@@ -91,8 +91,7 @@ function tableTurrets() {
 
             td.appendChild(turretTxt)
             rows.appendChild(td)
-            td.classList.add(`cellTurret`)
-            td.setAttribute(`id`, `turrets${tr}`)
+            td.classList.add(`cellTurret`, `turrets${tr}`)
         }
 
         tableTurrets.appendChild(rows)

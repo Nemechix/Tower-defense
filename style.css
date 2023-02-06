@@ -5,7 +5,7 @@
     font-weight: 500;
 }
 
-* {
+*{
     font-family: "metal";
     font-size: 25px;
     letter-spacing: 1px;
@@ -36,13 +36,16 @@ body {
     align-items: center;
 }
 
-.turretZone:hover {
+.turretZone:hover{
     background-color: lightcoral;
 }
+td{
+    border-radius: 4px;
+}
+
 
 #uiGame {
-    background: #D3D3D3;
-    height: 640px;
+    background: linear-gradient(#D3D3D3, #FFFFFF);    height: 640px;
     width: 200px;
     position: relative;
     display: flex;
@@ -69,6 +72,7 @@ h2 {
 }
 
 #uiGameTurrets {
+
     position: absolute;
     height: 200px;
     width: 100px;
@@ -85,30 +89,34 @@ h2 {
     height: 100px;
     background-color: #B1A7A6;
     border-radius: 15px;
-    transition: transform 1s ease-in;
+    transition: ease 0.25s;
+
 }
 
 .cellTurret:hover {
-    transform: sc;
+        height: 115px;
+        transition: ease 0.25s;
+        border-radius: px;
 }
 
-#turrets0 {
-    background-image: url(/Tower-defense/assets/d97spro-e73020d0-21fa-46b6-8968-b19728ce9c3b.gif);
 
+
+.turrets0 {
+    background-image: url(/Tower-defense/assets/d97spro-e73020d0-21fa-46b6-8968-b19728ce9c3b.gif);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
+    transition: 1s;
 
 }
 
 
 
-#turrets1 {
+.turrets1 {
     background: #F0EBD8;
 }
 
-#turrets2 {
+.turrets2 {
     background: #F0EBD8;
 }
 
@@ -121,6 +129,8 @@ h2 {
     background-position: center;
     background-size: 55px;
     background-repeat: no-repeat;
+    
+    
 }
 
 .end {
