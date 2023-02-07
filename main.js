@@ -10,6 +10,7 @@ musicaGame.volume = 0.3;
 musicaGame.play()
 
 
+
 //Timer
 const timeKeeper = document.getElementById(`timer`)
 

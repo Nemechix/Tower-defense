@@ -33,6 +33,7 @@ function Turret(dmg, x, y) {
         rightDown = { x: this.pos.x + 1, y: this.pos.y + 1 },
 
 
+
         left = { x: this.pos.x, y: this.pos.y - 1 },
         leftUp = { x: this.pos.x - 1, y: this.pos.y - 1 },
         leftDown = { x: this.pos.x + 1, y: this.pos.y - 1 },
@@ -60,11 +61,13 @@ cells.forEach((element) => {
     element.onclick = function () {
         if (!element.classList.contains(`path`)) {
             if (moneyPlayer >= 10 && chosenTurret !== 1) {
+
                 let row = element.parentNode.classList[0].replace(`row`, ``)
                 row = parseInt(row)
 
                 let col = element.className.replace(`col`, ``)
                 col = parseInt(col)
+
 
 
 
@@ -88,6 +91,28 @@ cells.forEach((element) => {
 
                 putTurret.play()
 
+
+                if (chosenTurret === `turrets0`) {
+                   var turret = new Turret(2, row, col)
+
+                } else if (chosenTurret === `turrets1`) {
+                   var turret = new Turret(5, row, col)
+
+                } else if (chosenTurret === `turrets2`) {
+                    var  turret = new Turret(5, row, col)
+                }
+                console.log(game.turret)
+
+               
+                game.turret.push(turret)
+                game.range.push(turret.range)
+                
+                element.classList.add(chosenTurret)
+                moneyPlayer -= 10
+                moneyUi.innerHTML = moneyPlayer
+                
+                putTurret.play()
+                   
             }
         }
     }

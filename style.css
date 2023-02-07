@@ -5,7 +5,9 @@
     font-weight: 500;
 }
 
+
 * {
+
     font-family: "metal";
     font-size: 25px;
     letter-spacing: 1px;
@@ -50,6 +52,7 @@ td {
 #uiGame {
     background: linear-gradient(#D3D3D3, #FFFFFF);
     height: 840px;
+
     width: 200px;
     position: relative;
     display: flex;
@@ -101,11 +104,13 @@ h2 {
     height: 115px;
     transition: ease 0.25s;
     border-radius: px;
+
 }
 
 
 
 .turrets0 {
+
     background-image: url(/assets/d97spro-e73020d0-21fa-46b6-8968-b19728ce9c3b.gif);
     background-size: cover;
     background-position: center;
@@ -133,8 +138,6 @@ h2 {
     background-position: center;
     background-size: 55px;
     background-repeat: no-repeat;
-
-
 }
 
 .end {

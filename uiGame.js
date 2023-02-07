@@ -48,7 +48,9 @@ timer.appendChild(hurry)
 hurry.appendChild(upper)
 uiValues.appendChild(timer)
 
+
 hurry.setAttribute(`id`, `timer`)
+
 hurry.classList.add(`uiValuesNum`)
 
 //Puntuación
@@ -93,7 +95,6 @@ const uiGameTurrets = document.createElement(`div`)
 
 function tableTurrets() {
     const tableTurrets = document.createElement(`table`)
-
 
     for (let tr = 0; tr < 3; tr++) {
         const rows = document.createElement(`tr`)
