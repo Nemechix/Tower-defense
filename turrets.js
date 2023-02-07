@@ -28,9 +28,10 @@ function Turret(dmg, x, y) {
     }
     this.range = [
         this.pos,
-        right = {x: this.pos.x, y: this.pos.y+1},
-        rightUp = { x: this.pos.x -1, y: this.pos.y + 1 },
-        rightDown = { x: this.pos.x +1 , y: this.pos.y + 1 },
+        right = { x: this.pos.x, y: this.pos.y + 1 },
+        rightUp = { x: this.pos.x - 1, y: this.pos.y + 1 },
+        rightDown = { x: this.pos.x + 1, y: this.pos.y + 1 },
+
 
 
         left = { x: this.pos.x, y: this.pos.y - 1 },
@@ -59,14 +60,36 @@ turrets2.onclick = function () {
 cells.forEach((element) => {
     element.onclick = function () {
         if (!element.classList.contains(`path`)) {
-            if (moneyPlayer >= 10 && chosenTurret !== 1) 
-                 {
+            if (moneyPlayer >= 10 && chosenTurret !== 1) {
+
                 let row = element.parentNode.classList[0].replace(`row`, ``)
                 row = parseInt(row)
 
                 let col = element.className.replace(`col`, ``)
                 col = parseInt(col)
-                   
+
+
+
+
+                if (chosenTurret === `turrets0`) {
+                    var turret = new Turret(2, row, col)
+
+                } else if (chosenTurret === `turrets1`) {
+                    var turret = new Turret(5, row, col)
+
+                } else if (chosenTurret === `turrets2`) {
+                    var turret = new Turret(5, row, col)
+                }
+
+
+                game.turret.push(turret)
+                game.range.push(turret.range)
+
+                element.classList.add(chosenTurret)
+                moneyPlayer -= 10
+                moneyUi.innerHTML = moneyPlayer
+
+                putTurret.play()
 
 
                 if (chosenTurret === `turrets0`) {
