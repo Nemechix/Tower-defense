@@ -59,7 +59,7 @@ turrets2.onclick = function () {
 
 cells.forEach((element) => {
     element.onclick = function () {
-        if (!element.classList.contains(`path`)) {
+        if (!element.classList.contains(`path`) && !element.classList.contains(`turrets0`) && !element.classList.contains(`turrets1`) && !element.classList.contains(`turrets2`)){
             if (moneyPlayer >= 10 && chosenTurret !== 1) {
 
                 let row = element.parentNode.classList[0].replace(`row`, ``)
@@ -90,29 +90,6 @@ cells.forEach((element) => {
                 moneyUi.innerHTML = moneyPlayer
 
                 putTurret.play()
-
-
-                if (chosenTurret === `turrets0`) {
-                   var turret = new Turret(2, row, col)
-
-                } else if (chosenTurret === `turrets1`) {
-                   var turret = new Turret(5, row, col)
-
-                } else if (chosenTurret === `turrets2`) {
-                    var  turret = new Turret(5, row, col)
-                }
-                console.log(game.turret)
-
-               
-                game.turret.push(turret)
-                game.range.push(turret.range)
-                
-                element.classList.add(chosenTurret)
-                moneyPlayer -= 10
-                moneyUi.innerHTML = moneyPlayer
-                
-                putTurret.play()
-                   
             }
         }
     }

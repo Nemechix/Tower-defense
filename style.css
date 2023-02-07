@@ -3,6 +3,7 @@
     src: url('fonts/Metal\ Vengeance.ttf') format('truetype');
     font-style: oblique;
     font-weight: 500;
+    
 }
 
 
@@ -15,6 +16,7 @@
 }
 
 body {
+    padding-top: 125px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,10 +28,14 @@ body {
 
 
 #board {
+    
     width: 950px;
     height: 950px;
     border-spacing: 0px;
-    background: linear-gradient(#A40606, #D98324);
+    background-image: url(/assets/Mapa3.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border-radius: 20px;
 }
 
@@ -50,7 +56,11 @@ td {
 
 
 #uiGame {
-    background: linear-gradient(#D3D3D3, #FFFFFF);
+    background-image: url(/assets/ui.gif);
+    background: linear-gradient(blue yellow );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 840px;
 
     width: 200px;
@@ -69,7 +79,7 @@ td {
 
 h2 {
     box-sizing: content-box;
-    color: #161A1D;
+    color: #000000;
 }
 
 .uiValuesNum {
@@ -83,7 +93,7 @@ h2 {
     position: absolute;
     height: 200px;
     width: 100px;
-    top: 290px;
+    top: 365px;
     display: flex;
     left: 50px;
 
@@ -122,28 +132,34 @@ h2 {
 
 
 .turrets1 {
+    background-image: url(/assets/fire-skull.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     background: #F0EBD8;
 }
 
 .xturrets2 {
+
     background: #F0EBD8;
 }
 
-.path {
-    background: #D3D3D3;
+/* .path {
+   
 }
-
+ */
 .enemy {
-    background-image: url(assets/krzysztof-pixel-matys-92-run-v4.gif);
+    background-image: url(assets/kEv4pjC.gif);
     background-position: center;
     background-size: 55px;
     background-repeat: no-repeat;
 }
 
-.end {
+/* .end {
     background: #161A1D;
 }
 
 .spawn {
     background: #660708
-}
+} */

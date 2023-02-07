@@ -1,3 +1,6 @@
+let lifeUi = document.getElementById(`LifePoints`)
+let lifePoints = parseInt(lifeUi.innerHTML)
+
 //Intervalo de cada cuanto tarda un enemigo en aparecer
 
 let timerId = setInterval(() => {
@@ -84,9 +87,13 @@ function Enemy(hp, x, y, direction, game) {
             }
         }
         if (endPosition.classList.contains("end")) {
+            lifePoints -= 1
+            lifeUi.innerHTML = lifePoints
+
+            let enemy = document.querySelector(`.row${this.pos.x} .col${this.pos.y}`);
+            enemy.classList.remove("enemy")
             clearInterval(this.enemyId)
             game.monster.shift()
-
 
         }
 
@@ -107,25 +114,21 @@ function Enemy(hp, x, y, direction, game) {
 
 
                     });
-                    if (this.hp <= 0) {
 
-                        moneyPlayer += 10
-                        moneyUi.innerHTML = moneyPlayer
-
-                        scorePlayer += 1
-                        scoreUi.innerHTML = scorePlayer
-
-                        let enemy = document.querySelector(`.row${this.pos.x} .col${this.pos.y}`);
-                        enemy.classList.remove("enemy")
-                        clearInterval(this.enemyId)
-                        game.monster.shift()
-
-                    }
                 }
             }
         });
 
+        if (this.hp <= 0) {
+            scorePlayer += 1
+            scoreUi.innerHTML = scorePlayer
 
+            let enemy = document.querySelector(`.row${this.pos.x} .col${this.pos.y}`);
+            enemy.classList.remove("enemy")
+            clearInterval(this.enemyId)
+            game.monster.shift()
+
+        }
 
 
     }
