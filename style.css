@@ -32,7 +32,7 @@ body {
     width: 950px;
     height: 950px;
     border-spacing: 0px;
-    background-image: url(/assets/Mapa3.png);
+    background-image: url(/assets/mapa.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -56,7 +56,7 @@ td {
 
 
 #uiGame {
-    background-image: url(/assets/ui.gif);
+    background-image: url(/assets/uiGameBackground.gif);
     background: linear-gradient(blue yellow );
     background-size: cover;
     background-position: center;
@@ -121,7 +121,7 @@ h2 {
 
 .turrets0 {
 
-    background-image: url(/assets/d97spro-e73020d0-21fa-46b6-8968-b19728ce9c3b.gif);
+    background-image: url(/assets/torre0.gif);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -150,7 +150,7 @@ h2 {
 }
  */
 .enemy {
-    background-image: url(assets/kEv4pjC.gif);
+    background-image: url(assets/caballero.gif);
     background-position: center;
     background-size: 55px;
     background-repeat: no-repeat;
