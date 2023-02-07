@@ -159,9 +159,8 @@ h2 {
 }
 
 
-canvas {
-    /* visibility: hidden; */
-    background-color: #660708;
+#gameOver {
+    visibility: hidden;
     position: absolute;
     height: 950px;
     width: 1150px;
@@ -170,18 +169,20 @@ canvas {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
 h1 {
+    padding-left: 225px;
+    padding-bottom: 450px;
+    color: #c73a3d;
     font-family: "metal";
-    visibility: visible;
-    height: 300px;
-    width: 300px;
-    font-size: 30px;
-    background-color: #000000;
+    text-shadow: rgb(255, 255, 255) 1px 15px 10px;
+    width: 900px;
+    font-size: 100px;
     position: absolute;
+    
 }
 
-.damageZone {
-    background-color: aqua;
-}

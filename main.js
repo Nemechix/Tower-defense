@@ -5,7 +5,7 @@ let game = {
 }
 
 let musicaGame = new Audio("assets/musica.mp3")
-musicaGame.volume = 0.2;
+musicaGame.volume = 0.1;
 
 musicaGame.play()
 
@@ -46,16 +46,22 @@ start()
 
 
 
-//canvas
-const canvas = document.createElement(`canvas`)
-document.body.appendChild(canvas)
-canvas.setAttribute(`id`, `gameOver`)
-
-
-const startAgain = document.createElement(`button`)
+//div Game Over
+const divOVer = document.createElement(`div`)
+document.body.appendChild(divOVer)
 
 const h1 = document.createElement(`h1`)
 const gameOver = document.createTextNode(`Game Over`)
 
 h1.appendChild(gameOver)
-canvas.appendChild(h1)
+
+divOVer.appendChild(h1)
+
+const startAgain = document.createElement(`button`)
+
+divOVer.setAttribute(`id`, `gameOver`)
+
+
+
+
+

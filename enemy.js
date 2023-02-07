@@ -6,10 +6,10 @@ enemyHit.volume = 1;
 //Intervalo de cada cuanto tarda un enemigo en aparecer
 function spawn (){
     let timerId = setInterval(() => {
-    const enemy = new Enemy(10, 9, 0, "right", game)
+    const enemy = new Enemy(20, 9, 0, "right", game)
 
     game.monster.push(enemy)
-}, 2500);
+}, 2200);
 }
 
 spawn()
@@ -29,7 +29,7 @@ function Enemy(hp, x, y, direction, game) {
     this.enemyId = setInterval(() => {
         this.movePath()
 
-    }, 200); //Velocidad de movimiento entre celdas
+    }, 300); //Velocidad de movimiento entre celdas
 
 
 
@@ -107,6 +107,7 @@ function Enemy(hp, x, y, direction, game) {
 
         Enemy.prototype.receiveDamage = function (dmg) {
             this.hp -= dmg
+
         }
 
 
@@ -118,7 +119,6 @@ function Enemy(hp, x, y, direction, game) {
                     game.turret.forEach(turret => {
                         if (turret.pos.x === element[0].x && turret.pos.y === element[0].y) {
                             this.receiveDamage(turret.dmg)
-                            
                         }
                     });
 
@@ -128,6 +128,7 @@ function Enemy(hp, x, y, direction, game) {
 
         if (this.hp <= 0) {
             enemyHit.play()
+
 
             scorePlayer += 1
             scoreUi.innerHTML = scorePlayer
