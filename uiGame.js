@@ -48,9 +48,6 @@ timer.appendChild(hurry)
 hurry.appendChild(upper)
 uiValues.appendChild(timer)
 
-
-hurry.setAttribute(`id`, `timer`)
-
 hurry.classList.add(`uiValuesNum`)
 
 //Puntuación
@@ -72,20 +69,7 @@ sum.classList.add(`uiValuesNum`)
 uiGame.appendChild(uiValues)
 
 
-//Vidas
-const lifeP = document.createElement(`h2`)
-const lifeTxt = document.createTextNode(`Life:`)
-const hpNum = document.createElement(`span`)
-const hpPoints = document.createTextNode(`3`)
 
-
-lifeP.appendChild(lifeTxt)
-lifeP.appendChild(hpNum)
-hpNum.appendChild(hpPoints)
-uiValues.appendChild(lifeP)
-
-hpNum.setAttribute(`id`, `LifePoints`)
-hpNum.classList.add(`uiValuesNum`)
 
 
 
@@ -95,6 +79,7 @@ const uiGameTurrets = document.createElement(`div`)
 
 function tableTurrets() {
     const tableTurrets = document.createElement(`table`)
+    
 
     for (let tr = 0; tr < 3; tr++) {
         const rows = document.createElement(`tr`)
