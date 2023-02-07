@@ -39,6 +39,7 @@ body {
 .turretZone:hover{
     background-color: lightcoral;
 }
+
 td{
     border-radius: 4px;
 }
@@ -116,7 +117,7 @@ h2 {
     background: #F0EBD8;
 }
 
-.turrets2 {
+.xturrets2 {
     background: #F0EBD8;
 }
 
