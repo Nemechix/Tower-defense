@@ -1,7 +1,3 @@
-// $('document').ready(function(){
-
-// });
-
 //Div uiGame
 const uiGame = document.createElement(`div`)
 

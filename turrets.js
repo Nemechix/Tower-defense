@@ -41,12 +41,13 @@ function Turret(dmg, x, y) {
         up = { x: this.pos.x - 1, y: this.pos.y },
         down = { x: this.pos.x + 1, y: this.pos.y + 1 },
     ]
+    
 
 }
 
+
 turrets0.onclick = function () {
     chosenTurret = `turrets0`
-    console.log(`work`)
 }
 
 turrets1.onclick = function () {
@@ -73,6 +74,7 @@ cells.forEach((element) => {
 
                 if (chosenTurret === `turrets0`) {
                     var turret = new Turret(2, row, col)
+                   
 
                 } else if (chosenTurret === `turrets1`) {
                     var turret = new Turret(5, row, col)
@@ -81,11 +83,13 @@ cells.forEach((element) => {
                     var turret = new Turret(5, row, col)
                 }
 
-
                 game.turret.push(turret)
                 game.range.push(turret.range)
 
+                
+
                 element.classList.add(chosenTurret)
+
                 moneyPlayer -= 10
                 moneyUi.innerHTML = moneyPlayer
 
@@ -95,4 +99,6 @@ cells.forEach((element) => {
     }
 
 });
+
+
 

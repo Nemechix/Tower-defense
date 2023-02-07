@@ -3,7 +3,7 @@
     src: url('fonts/Metal\ Vengeance.ttf') format('truetype');
     font-style: oblique;
     font-weight: 500;
-    
+
 }
 
 
@@ -14,6 +14,8 @@
     letter-spacing: 1px;
     color: #660708;
 }
+
+
 
 body {
     padding-top: 125px;
@@ -28,7 +30,7 @@ body {
 
 
 #board {
-    
+
     width: 950px;
     height: 950px;
     border-spacing: 0px;
@@ -57,7 +59,7 @@ td {
 
 #uiGame {
     background-image: url(assets/uiGameBackground.gif);
-    background: linear-gradient(blue yellow );
+    background: linear-gradient(blue yellow);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -117,6 +119,9 @@ h2 {
 
 }
 
+.turretZone:hover {
+    background-color: lightcoral;
+}
 
 
 .turrets0 {
@@ -145,10 +150,7 @@ h2 {
     background: #F0EBD8;
 }
 
-/* .path {
-   
-}
- */
+
 .enemy {
     background-image: url(assets/caballero.gif);
     background-position: center;
@@ -156,10 +158,30 @@ h2 {
     background-repeat: no-repeat;
 }
 
-/* .end {
-    background: #161A1D;
+
+canvas {
+    /* visibility: hidden; */
+    background-color: #660708;
+    position: absolute;
+    height: 950px;
+    width: 1150px;
+    background-image: url(assets/mapa.png);
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+h1 {
+    font-family: "metal";
+    visibility: visible;
+    height: 300px;
+    width: 300px;
+    font-size: 30px;
+    background-color: #000000;
+    position: absolute;
 }
 
-.spawn {
-    background: #660708
-} */
+.damageZone {
+    background-color: aqua;
+}

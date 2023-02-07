@@ -5,7 +5,7 @@ let game = {
 }
 
 let musicaGame = new Audio("assets/musica.mp3")
-musicaGame.volume = 0.3;
+musicaGame.volume = 0.2;
 
 musicaGame.play()
 
@@ -43,3 +43,19 @@ function start() {
     interval = setInterval(chronometre, 1000)
 }
 start()
+
+
+
+//canvas
+const canvas = document.createElement(`canvas`)
+document.body.appendChild(canvas)
+canvas.setAttribute(`id`, `gameOver`)
+
+
+const startAgain = document.createElement(`button`)
+
+const h1 = document.createElement(`h1`)
+const gameOver = document.createTextNode(`Game Over`)
+
+h1.appendChild(gameOver)
+canvas.appendChild(h1)

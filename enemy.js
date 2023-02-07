@@ -1,14 +1,18 @@
 let lifeUi = document.getElementById(`LifePoints`)
 let lifePoints = parseInt(lifeUi.innerHTML)
+let enemyHit = new Audio("assets/hit.mp3")
+enemyHit.volume = 1;
 
 //Intervalo de cada cuanto tarda un enemigo en aparecer
-
-let timerId = setInterval(() => {
+function spawn (){
+    let timerId = setInterval(() => {
     const enemy = new Enemy(10, 9, 0, "right", game)
 
     game.monster.push(enemy)
 }, 2500);
+}
 
+spawn()
 
 
 //refactor timers hacer
@@ -95,6 +99,10 @@ function Enemy(hp, x, y, direction, game) {
             clearInterval(this.enemyId)
             game.monster.shift()
 
+            if(lifePoints === 0){
+            document.getElementById("gameOver").style.visibility = "visible"
+            }
+
         }
 
         Enemy.prototype.receiveDamage = function (dmg) {
@@ -110,9 +118,8 @@ function Enemy(hp, x, y, direction, game) {
                     game.turret.forEach(turret => {
                         if (turret.pos.x === element[0].x && turret.pos.y === element[0].y) {
                             this.receiveDamage(turret.dmg)
+                            
                         }
-
-
                     });
 
                 }
@@ -120,8 +127,13 @@ function Enemy(hp, x, y, direction, game) {
         });
 
         if (this.hp <= 0) {
+            enemyHit.play()
+
             scorePlayer += 1
             scoreUi.innerHTML = scorePlayer
+
+            moneyPlayer += 10
+            moneyUi.innerHTML = moneyPlayer
 
             let enemy = document.querySelector(`.row${this.pos.x} .col${this.pos.y}`);
             enemy.classList.remove("enemy")
@@ -129,9 +141,6 @@ function Enemy(hp, x, y, direction, game) {
             game.monster.shift()
 
         }
-
-
     }
 }
-
 
