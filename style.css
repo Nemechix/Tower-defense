@@ -32,7 +32,7 @@ body {
     width: 950px;
     height: 950px;
     border-spacing: 0px;
-    background-image: url(/assets/mapa.png);
+    background-image: url(assets/mapa.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -56,7 +56,7 @@ td {
 
 
 #uiGame {
-    background-image: url(/assets/uiGameBackground.gif);
+    background-image: url(assets/uiGameBackground.gif);
     background: linear-gradient(blue yellow );
     background-size: cover;
     background-position: center;
@@ -121,7 +121,7 @@ h2 {
 
 .turrets0 {
 
-    background-image: url(/assets/torre0.gif);
+    background-image: url(assets/torre0.gif);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -132,7 +132,7 @@ h2 {
 
 
 .turrets1 {
-    background-image: url(/assets/fire-skull.gif);
+    background-image: url(assets/fire-skull.gif);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
