@@ -14,7 +14,7 @@ uiValues.setAttribute(`id`, `uiValues`)
 
 //Título
 const title = document.createElement(`h2`)
-const defenders = document.createTextNode(`Reboot defenders`)
+const defenders = document.createTextNode(`Demon defenders`)
 title.appendChild(defenders)
 uiValues.appendChild(title)
 
